@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cluster Deploy</title>
+    </head>
+    <body>
+    CDP Cluster Deployment<br>
+     <form action="/uploader" method = "POST" enctype = "multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.inventory_file.label }}<br>
+            {{ form.inventory_file(size=32) }}
+        </p>
+        <p>{{ form.template_files.label }}<br>
+            {{ form.template_files(size=32) }}</p>
+         <p>{{ form.vault_password.label }}<br>
+            {{ form.vault_password(size=32) }}</p>
+         <p>
+            {{ form.img_version.label }}<br>
+            {{ form.img_version(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+   </body>
+</html>
